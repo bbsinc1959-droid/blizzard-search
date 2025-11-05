@@ -57,5 +57,17 @@
   <footer>
     &copy; <script>document.write(new Date().getFullYear());</script> Blizzard Building Supply
   </footer>
+
+  <!-- This script auto-resizes the iframe when embedded in SITE123 -->
+  <script>
+    function sendHeightToParent() {
+      if (window.frameElement) {
+        const height = document.body.scrollHeight;
+        window.frameElement.style.height = height + 'px';
+      }
+    }
+    setInterval(sendHeightToParent, 500);
+  </script>
 </body>
 </html>
+
